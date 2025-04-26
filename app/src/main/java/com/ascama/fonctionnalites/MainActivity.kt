@@ -26,6 +26,9 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.ascama.fonctionnalites.ui.navigations.NavigationHost
 import com.ascama.fonctionnalites.ui.theme.FonctionnalitesTheme
 
 class MainActivity : ComponentActivity() {
@@ -35,9 +38,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             FonctionnalitesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen(
-
-                    )
+                    val navHostController = rememberNavController()
+                    NavigationHost(navHostController)
                 }
             }
         }
@@ -45,7 +47,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(navHostController: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize(),
@@ -53,7 +55,7 @@ fun HomeScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Button(
-            onClick = {},
+            onClick = { navHostController.navigate("PDFReader/revision_et_reference.pdf")},
             modifier = Modifier
                 .width(250.dp)
                 .height(70.dp),
@@ -74,6 +76,7 @@ fun HomeScreen() {
 @Composable
 fun GreetingPreview() {
     FonctionnalitesTheme {
-        HomeScreen()
+        val navHostController = rememberNavController()
+        HomeScreen(navHostController)
     }
 }
