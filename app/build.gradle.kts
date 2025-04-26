@@ -58,7 +58,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
 
+    // La navigation
+    implementation(libs.androidx.navigation.compose)
     // Librairie du pdf
-
     implementation(libs.android.pdf.viewer)
+
 }
