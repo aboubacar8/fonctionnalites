@@ -59,6 +59,6 @@ dependencies {
 
 
     // Librairie du pdf
-
     implementation(libs.android.pdf.viewer)
+
 }
