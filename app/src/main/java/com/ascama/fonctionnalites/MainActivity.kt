@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.ascama.fonctionnalites.ui.navigations.NavigationHost
+import com.ascama.fonctionnalites.ui.screens.ModalNavigationDrawer
 import com.ascama.fonctionnalites.ui.theme.FonctionnalitesTheme
 
 class MainActivity : ComponentActivity() {
@@ -39,7 +40,7 @@ class MainActivity : ComponentActivity() {
             FonctionnalitesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     val navHostController = rememberNavController()
-                    NavigationHost(navHostController)
+                    ModalNavigationDrawer(navHostController)
                 }
             }
         }
