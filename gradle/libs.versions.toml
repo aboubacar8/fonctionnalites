@@ -1,6 +1,6 @@
 [versions]
 agp = "8.9.2"
-githubAndroidPdfViewerVersion = "3.2.0-beta.1"
+githubAndroidPdfViewerVersion = "3.2.0-beta.2"
 
 kotlin = "2.1.0"
 coreKtx = "1.16.0"
@@ -10,6 +10,8 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
 composeBom = "2025.04.01"
+mathview = "0.0.6"
+mathviewVersion = "0.4.0"
 navigationCompose = "2.8.9"
 
 [libraries]
@@ -17,6 +19,7 @@ navigationCompose = "2.8.9"
 android-pdf-viewer = { module = "com.github.mhiew:android-pdf-viewer", version.ref = "githubAndroidPdfViewerVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+jstarczewski-mathview = { module = "com.github.jstarczewski:MathView", version.ref = "mathviewVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -30,6 +33,7 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+mathview = { module = "io.github.kexanie.library:MathView", version.ref = "mathview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

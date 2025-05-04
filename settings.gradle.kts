@@ -18,6 +18,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven(url = "https://jitpack.io")
+        maven ( url = "https://repo.spring.io/libs-milestone" )
     }
 }
 

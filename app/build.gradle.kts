@@ -63,4 +63,10 @@ dependencies {
     // Librairie du pdf
     implementation(libs.android.pdf.viewer)
 
+    // latex
+
+    implementation (libs.jstarczewski.mathview)
+
+
+
 }
